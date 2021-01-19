@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/tarcio11/clean-react.svg?branch=master)](https://travis-ci.com/tarcio11/clean-react)
+[![Coverage Status](https://coveralls.io/repos/github/tarcio11/clean-react/badge.svg?branch=1.2.1)](https://coveralls.io/github/tarcio11/clean-react?branch=1.2.1)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
@@ -6,6 +7,10 @@
 # **4Dev React - Enquetes para Programadores**
 
 ## [**Link para a documentação da API**](https://clean-nodejs-api-dev.herokuapp.com/api-docs/)
+
+Esse sistema faz parte do treinamento do professor Rodrigo Manguinho (Mango) na Udemy.
+
+O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando os novos Hooks, com uma arquitetura bem definida e desacoplada, utilizando TDD (programação orientada a testes) como metodologia de trabalho, Clean Architecture para fazer a distribuição de responsabilidades em camadas, sempre seguindo os princípios do SOLID, DRY, YAGNI, KISS e aplicando Design Patterns para resolver alguns problemas comuns.
 
 > ## Princípios
 * Single Responsibility Principle (SRP)
@@ -27,11 +32,13 @@
 * Dependency Injection
 * Abstract Server
 * Composition Root
+* Builder
 
 > ## Metodologias e Designs
 * TDD
 * Clean Architecture
 * DDD
+* Reactive Programming
 * Conventional Commits
 * GitFlow
 * Modular Design
@@ -54,15 +61,20 @@
 * Faker
 * Coveralls
 * React Hooks
+* React Router
 * Husky
 * Lint Staged
 * Eslint
 * Standard Javascript Style
 
 > ## Features do React
+* React Testing Library
 * React Router
 * UseState
 * UseContext
+* UseEffect
+* UseHistory
+* Memo
 * Functional Components
 
 > ## Features do Git
@@ -72,9 +84,16 @@
 * Reset
 * Amend
 * Tag
+* Tag Anotada
 * Stash
 * Rebase
 * Merge
+* Add
+* Commit
+* Push
+* Pull
+* Shortlog
+* Status
 
 > ## Features do Typescript
 * POO Avançado
