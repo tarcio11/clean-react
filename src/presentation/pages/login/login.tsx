@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { Validation } from '@/presentation/protocols/validation'
-import Context from '@/presentation/contexts/form/form-context'
-import { Footer, Input, Header, FormStatus } from '@/presentation/components'
-import { Authentication, SaveAccessToken } from '@/domain/usecases'
 import Styles from './login-styles.scss'
+import { Footer, Input, Header, FormStatus } from '@/presentation/components'
+import Context from '@/presentation/contexts/form/form-context'
+import { Validation } from '@/presentation/protocols/validation'
+import { Authentication, SaveAccessToken } from '@/domain/usecases'
 
 type Props = {
   validation: Validation
@@ -34,7 +34,7 @@ const Login: React.FC<Props> = ({ validation, authentication, saveAccessToken }:
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault()
     try {
-      if (state.isLoading || state.mainError || state.passwordError) {
+      if (state.isLoading || state.emailError || state.passwordError) {
         return
       }
       setState({ ...state, isLoading: true })
@@ -56,7 +56,7 @@ const Login: React.FC<Props> = ({ validation, authentication, saveAccessToken }:
   return (
     <div className={Styles.login}>
       <Header />
-      <Context.Provider value={{ state, setState }}>
+      <Context.Provider value={ { state, setState }}>
         <form data-testid="form" className={Styles.form} onSubmit={handleSubmit}>
           <h2>Login</h2>
           <Input type="email" name="email" placeholder="Digite seu e-mail" />
