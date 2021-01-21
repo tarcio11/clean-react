@@ -1,6 +1,6 @@
 import React from 'react'
 import faker from 'faker'
-import { RenderResult, render, cleanup, fireEvent } from '@testing-library/react'
+import { RenderResult, render, cleanup } from '@testing-library/react'
 import SignUp from './signup'
 import { Helper, ValidationStub } from '@/presentation/test'
 
@@ -23,11 +23,6 @@ const makeSut = (params?: SutTParams): SutTypes => {
   }
 }
 
-const populateField = (sut: RenderResult, fieldName: string, value = faker.random.word()): void => {
-  const input = sut.getByTestId('email')
-  fireEvent.input(input, { target: { value } })
-}
-
 describe('SignUp Component', () => {
   afterEach(cleanup)
 
@@ -35,7 +30,7 @@ describe('SignUp Component', () => {
     const validationError = faker.random.words()
     const { sut } = makeSut({ validationError })
     Helper.testChildCount(sut, 'error-wrap', 0)
-    Helper.testButtonIsDisable(sut, 'submit', true)
+    Helper.testButtonIsDisabled(sut, 'submit', true)
     Helper.testStatusForField(sut, 'name', validationError)
     Helper.testStatusForField(sut, 'email', 'Campo obrigatório')
     Helper.testStatusForField(sut, 'password', 'Campo obrigatório')
@@ -45,7 +40,7 @@ describe('SignUp Component', () => {
   test('should show name error if Validation fails', () => {
     const validationError = faker.random.words()
     const { sut } = makeSut({ validationError })
-    populateField(sut, 'name')
+    Helper.populateField(sut, 'name')
     Helper.testStatusForField(sut, 'name', validationError)
   })
 })
