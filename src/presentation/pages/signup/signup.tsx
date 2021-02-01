@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import Styles from './signup-styles.scss'
 import Context from '@/presentation/contexts/form/form-context'
-import { Footer, Input, Header, FormStatus, SubmitButton } from '@/presentation/components'
+import { Footer, Input, LoginHeader, FormStatus, SubmitButton } from '@/presentation/components'
 import { Validation } from '@/presentation/protocols/validation'
 import { AddAccount, SaveAccessToken } from '@/domain/usecases'
 
@@ -71,7 +71,7 @@ const SignUp: React.FC<Props> = ({ validation, addAccount, saveAccessToken }: Pr
 
   return (
     <div className={Styles.signupWrap}>
-      <Header />
+      <LoginHeader />
       <Context.Provider value={{ state, setState }}>
         <form data-testid="form" className={Styles.form} onSubmit={handleSubmit}>
           <h2>Criar Conta</h2>
