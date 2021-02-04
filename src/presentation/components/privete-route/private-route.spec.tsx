@@ -1,8 +1,8 @@
 import React from 'react'
+import { createMemoryHistory, MemoryHistory } from 'history'
 import { render } from '@testing-library/react'
 import { Router } from 'react-router-dom'
-import { createMemoryHistory, MemoryHistory } from 'history'
-import PrivateRoute from './private-route'
+import { PrivateRoute } from '@/presentation/components'
 import { ApiContext } from '@/presentation/contexts'
 import { mockAccountModel } from '@/domain/test'
 
