@@ -13,7 +13,7 @@ type Props = {
 
 const SurveyList: React.FC<Props> = ({ loadSurveyList }: Props) => {
   const history = useHistory()
-  const { setCurrentAccount, getCurrentAccount } = useContext(ApiContext)
+  const { setCurrentAccount } = useContext(ApiContext)
   const [state, setState] = useState({
     surveys: [] as LoadSurveyList.Model[],
     error: '',
