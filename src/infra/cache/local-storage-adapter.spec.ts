@@ -1,7 +1,6 @@
 import { LocalStorageAdapter } from './local-storage-adapter'
 import 'jest-localstorage-mock'
 import faker from 'faker'
-import { AccountModel } from '@/domain/models'
 
 const makeSut = (): LocalStorageAdapter => new LocalStorageAdapter()
 
