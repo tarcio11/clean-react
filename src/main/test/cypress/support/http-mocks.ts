@@ -24,7 +24,7 @@ export const mockForbiddenError = (url: RegExp, method: string): void => {
   }).as('request')
 }
 
-export const mockServerErrorError = (url: RegExp, method: string): void => {
+export const mockServerError = (url: RegExp, method: string): void => {
   cy.server()
   cy.route({
     method,

@@ -69,7 +69,7 @@ describe('SignUp', () => {
   })
 
   it('Should present UnexpectedError on default error cases', () => {
-    Http.mockUnexpectedErrorError()
+    Http.mockUnexpectedError()
     simulateValidSubmit()
     FormHelper.testMainError('Algo de errado aconteceu. Tente novamente em breve.')
     Helper.testUrl('signup')
